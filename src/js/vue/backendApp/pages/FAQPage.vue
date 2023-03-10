@@ -32,7 +32,7 @@
                 <p>There are a few cases when Typio is unable to restore your data automatically. You can always access your data through the recovery window, and you can restore it manually by copying and pasting it.</p>
 
                 <p>Typio is unable to automatically restore an entry in the following cases:</p>
-                
+
                 <h3>The original input field cannot be found</h3>
                 <p>In order for Typio to automatically restore an entry, it needs to find the original input field on the page. If the input field does not exist on the current page, or if it cannot be found in the same place (path has changed), Typio won't be able to auto-restore the entry.</p>
 

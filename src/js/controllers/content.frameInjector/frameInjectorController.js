@@ -32,7 +32,7 @@ if(window !== window.top) {
 				type: e.type
 			}
 		}
-	
+
 		// Special case for to send mouse coordinates
 		if(e.type === 'contextmenu') {
 			msg.terafmEvent.pageX = e.pageX;
@@ -42,7 +42,7 @@ if(window !== window.top) {
 		} else if(e.type === 'keyup') {
 			msg.terafmEvent.keyCode = e.keyCode;
 		}
-	
+
 		window.top.postMessage(msg, '*');
 	}
 
@@ -53,7 +53,7 @@ if(window !== window.top) {
 	}
 
 	attachListeners();
-	
+
 	// Wrapped in a timeout because some apps (like http://qiyukf.com/) does some wonky shit
 	// to the DOM after document load and the event listeners were not attached.
 	setTimeout(attachListeners, 20);

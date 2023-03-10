@@ -3,8 +3,6 @@ import initHandler from '../../modules/initHandler';
 import Editables from '../../modules/Editables';
 import { getEventTarget } from '../../modules/Helpers';
 
-getEventTarget
-
 let target,
 	focusTimeout;
 

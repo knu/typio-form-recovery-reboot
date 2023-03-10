@@ -51,7 +51,7 @@
 
 <script>
     import { getEventTarget } from '../../modules/Helpers';
-import keyboardShortcuts from '../../modules/keyboardShortcuts';
+    import keyboardShortcuts from '../../modules/keyboardShortcuts';
     import Options from '../../modules/options/options';
 
     export default {

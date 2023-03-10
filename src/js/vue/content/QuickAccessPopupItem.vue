@@ -96,7 +96,7 @@
                 placeholders.restore();
                 EditableDefaults.restore();
                 this.rootInstance.hide();
-        
+
                 if(this.entry) {
                     if(!this.isSess || commitSingleFromSession) {
                         this.editable.applyEntry(this.entry, { clone: true }, db);

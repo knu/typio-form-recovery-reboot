@@ -172,7 +172,7 @@
 		&:before, &:after {
 			opacity: 1;
 		}
-	} 
+	}
 
 	[data-tooltip]:before {
 		content: attr(data-tooltip);

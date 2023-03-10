@@ -113,7 +113,7 @@
                     &:hover {
                         text-decoration: underline;
                     }
-                }                
+                }
             }
 
             .page-container {

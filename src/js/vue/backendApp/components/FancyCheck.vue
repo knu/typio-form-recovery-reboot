@@ -38,7 +38,7 @@
 </script>
 
 <style lang="scss" scoped>
-    
+
     .fancy-check-wrapper {
         &:hover .fancy-check {
         }
