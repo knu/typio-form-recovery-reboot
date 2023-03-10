@@ -149,6 +149,8 @@
 
                 delConfirmEntry: false,
 
+                getEventTarget: getEventTarget,
+
                 stats: {
                     countTotSessions: 0,
                     countTotEntries: 0,
