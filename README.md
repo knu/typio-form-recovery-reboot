@@ -1,11 +1,24 @@
 # Typio Form Recovery
 
-This is the repository for the Typio Form Recovery app found here:
-https://chrome.google.com/webstore/detail/typio-form-recovery/djkbihbnjhkjahbhjaadbepppbpoedaa
+This repository is the source code for a modified version of [Typio Form Recovery](https://chrome.google.com/webstore/detail/typio-form-recovery/djkbihbnjhkjahbhjaadbepppbpoedaa), which was long broken due to the discontinuation of the `Event.path` API in Chrome 109.  
 
-Please submit feedback or bugs on the [issues page](https://bitbucket.org/nicklassandell/chrome-form-recovery/issues?status=new&status=open) or email me at typiorecovery@gmail.com.
+The original repository is at https://github.com/ctsstc/typio-form-recovery-reboot, but due to the upgrade to Vue 3.x and other reckless changes, some of the code that used to work no longer works.  
+Given the number of changes from Vue 2.x -> 3.x, the magnitude of the changes, and my lack of familiarity with this code, it does not seem practical to switch to Vue 3.x.
 
-# Changelog
+In this forked repository, my priority was to keep the dependencies updated to minor versions and keep the usability as before.
+
+Please submit feedback or bugs on the [Issues](https://github.com/tsukumijima/typio-form-recovery-reboot/issues) page.
+
+## Download
+
+An archive of pre-built Chrome extensions can be found on the [Releases](https://github.com/tsukumijima/typio-form-recovery-reboot/releases) page.
+
+## Changelog
+
+### Version 3.3.0 (12th March, 2023)
+- Fix: Text box style collapse when using dark mode
+- Fix: "TypeError: _vm.getEventTarget is not a function"
+- Change: Upgrade dependencies
 
 ### Version 3.2.5 (16th February, 2023)
 - Fix: `Uncaught TypeError: Cannot read properties of undefined (reading '0')`. In Chrome v109 (Jan. 2023 Release) `event.path` was deprecated and replaced with `event.composedPath()`. This fixes that across the codebase by utilizing a new `getEventTarget` helper function to centralize the fix.
