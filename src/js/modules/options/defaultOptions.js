@@ -17,21 +17,19 @@ def.qaGroupSessions = true;
 def.qaEnableSessionSubmenu = true;
 def.hideContextItems = false;
 
-// Mac specific
-if(window.navigator.platform.toLowerCase().indexOf('mac') !== -1) {
-	def.keybindToggleRecDiag = 'Control + Backspace';
-	def.keybindRestorePreviousSession = 'Control + Alt + Backspace';
-	def.keybindOpenQuickAccess = 'Control + r';
-
-// Windows and everything else
-} else {
-	def.keybindToggleRecDiag = 'Alt + Backspace';
-	def.keybindRestorePreviousSession = 'Shift + Alt + Backspace';
-	def.keybindOpenQuickAccess = 'Alt + r';
-}
-
-
-
+chrome.runtime.getPlatformInfo(
+	({ os }) => {
+		if (os === "mac") {
+			def.keybindToggleRecDiag = 'Control + Backspace';
+			def.keybindRestorePreviousSession = 'Control + Alt + Backspace';
+			def.keybindOpenQuickAccess = 'Control + r';
+		} else {
+			def.keybindToggleRecDiag = 'Alt + Backspace';
+			def.keybindRestorePreviousSession = 'Shift + Alt + Backspace';
+			def.keybindOpenQuickAccess = 'Alt + r';
+		}
+	}
+);
 
 defaultOptions.get = function(opt) {
 	return opt in def ? def[opt] : undefined
